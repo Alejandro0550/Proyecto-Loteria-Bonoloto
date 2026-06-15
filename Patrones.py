@@ -47,7 +47,7 @@ numeros_validos.sort(key=lambda x: x["Total"], reverse=True)
 
 # Generar agrupaciones de 6 números
 agrupaciones = []
-while len(agrupaciones) < 8:
+while len(agrupaciones) < 24:
     agrupacion = random.sample(numeros_validos, 6) if len(numeros_validos) >= 6 else random.choices(numeros_validos, k=6)
     agrupacion_numeros = [str(numero["Numero"]).zfill(2) for numero in agrupacion]  # Formatear a dos dígitos
     if agrupacion_numeros not in agrupaciones:
